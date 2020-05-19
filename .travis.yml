@@ -1,0 +1,15 @@
+language: php
+php:
+  - 7.2
+services:
+#  - mysql
+before_script:
+#  - composer install
+script: echo 'none'
+deploy:
+  provider: heroku
+  app: s6-travis-heroku
+  on: master
+  skip_cleanup: true
+  api_key:
+    secure: D/a04CRVZrRDrT+4ARoUrdEm/ZT6gZVEMUZAD565Sl7bOVztpFnpGAvazFt8vs61osOsWvzk6Mr5DyVGKjFgQG0662wcigA/2qKznsxPdWTDpoFLCQL5F1/7ACVg/iyNEciJiW3+KSFfm0psEXbDHmFcUaR+cv9hS887FthjJ4EQgF0ZTBOQo6BjobBwADyzitzWoXXk6ogqEsK5Ue6j1j5dVFevflAHSxaWNCEijrtdQJS+SbjFaJ//Ae+FNb/b8r3DMWP8jxRvfjXYISIbaTvwQ91lfSiIEA3Re7P0lwSrDYoVLSnYRUV0+G1BhN7QEd6qpjzK+VTjpyYi+Z/ulVzJ72yORnB4dbli/P15qVYX0yFeFCOgIvGevzfBlcejPivM8uWbhsNwR2mMK3BqHiT8+4P9m+2sh8YDubgxVaYH8lDFaVIFwpMrTs8hX0g+8nLN+67w78m1Esb6GYfklNVBmYgm+bMcMZkFAojAJ9b63Yup8/Ujl9UcgRoHFRD3mkDA178QlDavrUdxdqRkPyotKV3lWm0Fy/fT7k3bBS3aaTQ+WEzXK4wnGseW2JjQvS44yz/+w5R04BRXp+lshsk2IPiPbHWxhKHyZFI7gpoUgN7KmbWA4JFdTP9oIWP/jNJwW/G4LfF1hDcH7LgHzpLumDqeXGX/rf/AEI+lEis=
